@@ -22,3 +22,49 @@ Requirements
 Dependencies
 
     MySQL C Connector: This project uses the MySQL C API for database connectivity.
+Setup Instructions
+
+    Clone the Repository:
+
+    bash
+
+git clone <repository_url>
+cd telephone-directory-management-system
+
+Database Setup:
+
+    Ensure MySQL server is installed and running.
+    Create a database named tdms:
+
+    sql
+
+    CREATE DATABASE tdms;
+
+Import Database Schema:
+
+    Use the provided SQL script (tdms.sql) to create the necessary table:
+
+    bash
+
+    mysql -u root -p tdms < tdms.sql
+
+    Replace root with your MySQL username if different.
+
+Build and Run:
+
+    Compile the project using your C++ compiler (e.g., g++):
+
+    bash
+
+g++ main.cpp -o tdms -lmysqlclient
+
+Run the executable:
+
+bash
+
+    ./tdms
+
+Usage:
+
+    Follow the on-screen instructions to navigate through the application menu.
+    Use the respective menu options to create, search, update, delete contacts, or exit the program.
